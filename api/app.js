@@ -1,8 +1,12 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
+
 const router = require('./routes');
 // Log requests to the console
 app.use(logger('dev'));
